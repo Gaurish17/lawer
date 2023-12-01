@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Similarity Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        nav {
+            background-color: #35424a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #35424a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #29363d;
+        }
+    </style>
+</head>
+
+<body>
+<!--    <h1>Similarity Search</h1>-->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <form method="post">
+        <label for="feedback">Client Feedback:</label>
+        <input type="text" name="feedback" required>
+
+        <label for="jurisdiction">Jurisdiction:</label>
+        <input type="text" name="jurisdiction" required>
+
+        <label for="charges">Charges:</label>
+        <input type="text" name="charges" required>
+
+        <label for="demographics">Client Demographics:</label>
+        <input type="text" name="demographics" required>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+
+</html>

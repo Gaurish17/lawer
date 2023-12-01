@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        nav {
+            background-color: #35424a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #35424a;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Search Results</h1>
+    <nav>
+        <a href="/index">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <ul>
+        {% for result in results %}
+        <li>
+            <h2>Name: {{ result[0]['name'] }}</h2>
+            <p>Client Feedback: {{ result[0]['Client Feedback'] }}</p>
+            <p>Jurisdiction: {{ result[0]['Jurisdiction'] }}</p>
+            <p>Charges: {{ result[0]['charges'] }}</p>
+            <p>Client Demographics: {{ result[0]['Client Demographics'] }}</p>
+            <p>Combined Similarity: {{ result[1]|round(4) }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
