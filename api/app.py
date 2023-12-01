@@ -7,8 +7,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 app = Flask(__name__)
 
 # Load your preprocessed JSON data
-with open("your_data.json", "r") as json_file:
-    data = json.load(json_file)
+# with open("your_data.json", "r") as json_file:
+#     data = json.load(json_file)
 
 # Define the weights for each aspect (key)
 weights = {
